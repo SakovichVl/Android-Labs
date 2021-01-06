@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: '../git.gradle'
+def versionArray = getArray()
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    flavorDimensions "default"
+
+    defaultConfig {
+        applicationId "com.example.converter"
+        minSdkVersion 29
+        targetSdkVersion 30
+        versionCode 1generateVersionCode(versionArray)
+        versionName "test"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        relase {
+            storeFile file('C:\\Users\\vlad\\Keys\\keystore.jks')
+            storePassword '12345678'
+            keyAlias 'Converter'
+            keyPassword '12345678'
+        }
+    }
+
+    productFlavors{
+
+        freeFlavor{
+
+        }
+
+        paidFlavor{
+
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    mavenCentral()
+}

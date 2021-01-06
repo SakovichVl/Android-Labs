@@ -1,0 +1,35 @@
+def getArray() {
+    def diffOutput = new ByteArrayOutputStream()
+    exec {
+        commandLine  'git', 'describe', '--tags'
+                standardOutput = diffOutput
+    }
+    def ReceivedString = diffOutput.toString()
+    def currentDotPosition = ReceivedString.indexOf('.')
+    List VersionName = new ArrayList()
+    VersionName.add(ReceivedString.substring(1,currentDotPosition))
+    ReceivedString = ReceivedString.substring(currentDotPosition+1, ReceivedString.length())
+    currentDotPosition = ReceivedString.indexOf('-')
+    if (currentDotPosition!=-1){
+        VersionName.add(ReceivedString.substring(0,currentDotPosition))
+        ReceivedString = ReceivedString.substring(currentDotPosition+1, ReceivedString.length())
+        currentDotPosition = ReceivedString.indexOf('-')
+        VersionName.add(ReceivedString.substring(0, currentDotPosition))
+    }
+    else {
+        VersionName.add(ReceivedString.substring(0, ReceivedString.length()-1))
+        VersionName.add(0)
+    }
+    return VersionName
+
+}
+
+static def generateVersionCode(ArrayList array) {
+    def result = array[0].toInteger() * 1000 + array[1].toInteger() * 100 + array[2].toInteger()
+    return result
+}
+
+ext {
+    getArray = this.&getArray
+    generateVersionCode = this.&generateVersionCode
+}
