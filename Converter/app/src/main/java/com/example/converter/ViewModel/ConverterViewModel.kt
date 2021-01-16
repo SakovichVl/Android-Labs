@@ -52,7 +52,7 @@ class ConverterViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun convert() {
-        if (inputET.value != "") outputET.value = inputET.value?.let { Converter.convert(enumName.value, it, inputS.value, outputS.value) }
+        if (inputET.value != "") outputET.value = Converter.convert(enumName.value, inputET.value, inputS.value, outputS.value)
     }
 
     fun change() {

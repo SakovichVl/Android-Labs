@@ -3,7 +3,9 @@ package com.example.converter
 import android.annotation.SuppressLint
 import com.example.converter.Enum.CurrencyEnum
 import com.example.converter.Enum.DistanceEnum
+import com.example.converter.Enum.DistanceEnum.Companion.getCoefficient
 import com.example.converter.Enum.WeightEnum
+import com.example.converter.Enum.WeightEnum.Companion.getCoefficient
 
 object Converter {
     @SuppressLint("DefaultLocale")

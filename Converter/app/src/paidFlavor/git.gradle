@@ -1,7 +1,7 @@
 def getArray() {
     def diffOutput = new ByteArrayOutputStream()
     exec {
-        commandLine  'git', 'describe', '--tags'
+        commandLine  'git', 'describe',
                 standardOutput = diffOutput
     }
     def ReceivedString = diffOutput.toString()

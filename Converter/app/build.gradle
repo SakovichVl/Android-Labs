@@ -3,6 +3,8 @@ apply plugin: 'kotlin-android'
 apply from: '../git.gradle'
 def versionArray = getArray()
 
+
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -12,10 +14,11 @@ android {
         applicationId "com.example.converter"
         minSdkVersion 29
         targetSdkVersion 30
-        versionCode 1generateVersionCode(versionArray)
-        versionName "test"
+        versionCode generateVersionCode(versionArray)
+        versionName "${versionArray[2]}.${versionArray[1]}.${versionArray[0]}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
 
     signingConfigs {
@@ -42,6 +45,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
