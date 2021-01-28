@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Lab2</string>
+    <string name="settings">Настройки</string>
+    <string name="font_size">Размер текста</string>
+    <string name="select_font_size">Выберите размер текста</string>
+    <string name="select_language">Выберите язык</string>
+    <string name="app_language">Язык в приложении</string>
+    <string name="language">Язык</string>
+    <string name="dark_theme">Ночная тема</string>
+    <string name="turn_on">Включить</string>
+    <string name="turn_off">Включить</string>
+    <string name="delete">Удалить</string>
+    <string name="delete_all">Удалить все </string>
+    <string name="add_string">+</string>
+    <string name="preparation">Подготовка</string>
+    <string name="work">Работа</string>
+    <string name="rest">Отдых</string>
+    <string name="start">Старт</string>
+    <string name="pause">Пауза</string>
+    <string name="finish">Финиш</string>
+    <string name="name">Название</string>
+    <string name="cycle">Циклы</string>
+    <string name="set">Сеты</string>
+    <string name="Sleep">Успокоиться</string>
+    <string name="rest_between">Отдых между подходами</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="workout">Тренировка</string>
+    <string name="minus">-</string>
+    <string name="workout_completed">Тренировка завершена</string>
+    <string name="TIME">ВРЕМЯ</string>
+    <string name="STEP">ЭТАП</string>
+
+    <string-array name="language">
+        <item>Русский</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="language_alias">
+        <item>"ru"</item>
+        <item>"en"</item>
+    </string-array>
+
+    <string-array name="text_scale">
+        <item>Маленький</item>
+        <item>Средний</item>
+        <item>Большой</item>
+    </string-array>
+
+    <string-array name="text_scale_alias">
+        <item>0.85</item>
+        <item>1.0</item>
+        <item>1.15</item>
+    </string-array>
+</resources>

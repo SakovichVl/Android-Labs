@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lab2</string>
+
+    <string name="settings">Settings</string>
+    <string name="font_size">Font Size</string>
+    <string name="select_font_size">Choose Font size</string>
+    <string name="select_language">Select language</string>
+    <string name="app_language">App Language</string>
+    <string name="language">Language</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="turn_on">Turn ON</string>
+    <string name="turn_off">Turn OFF</string>
+    <string name="delete">DELETE</string>
+    <string name="delete_all">DELETE ALL</string>
+    <string name="add_string">+</string>
+    <string name="name">Name</string>
+    <string name="work">Work</string>
+    <string name="start">Start</string>
+    <string name="preparation">Preparation</string>
+    <string name="pause">Pause</string>
+    <string name="rest">Rest</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cycle">Cycles</string>
+    <string name="set">Sets</string>
+    <string name="Sleep">Calm Down</string>
+    <string name="cancel">Canceling</string>
+    <string name="save">Save</string>
+    <string name="workout">Workout</string>
+    <string name="minus">-</string>
+    <string name="workout_completed">Workout completed</string>
+    <string name="rest_between">Rest between sets</string>
+    <string name="finish">Finish</string>
+    <string name="TIME">TIME</string>
+    <string name="STEP">STEP</string>
+
+    <string-array name="text_scale">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Big</item>
+    </string-array>
+</resources>

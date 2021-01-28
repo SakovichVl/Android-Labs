@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:titleTextColor="@color/colorTextHeader"
+    android:background="@color/colorBackground"
+    tools:context=".CreateActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:label="@string/app_name"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorText" >
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="-2dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/workout"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"
+                android:textColor="@color/colorText" />
+
+
+            <EditText
+                android:id="@+id/nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textColorHighlight="@color/colorText"
+                android:textColorHint="@color/colorPrimary"
+                android:textColorLink="@color/colorText"
+                android:textCursorDrawable="@color/colorPrimaryDark"
+                android:importantForAutofill="no"
+                tools:ignore="TextFields" />
+
+
+            <TextView
+                android:id="@+id/textViewPrep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/preparation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/prepTimeDecrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/minus" />
+
+                <EditText
+                    android:id="@+id/preparationInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/prepTimeIncrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/plus" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/work"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorText"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/workTimeDecrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/minus" />
+
+                <EditText
+                    android:id="@+id/workInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/workTimeIncrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/plus" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/rest"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorText"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/restTimeDecrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/minus" />
+
+                <EditText
+                    android:id="@+id/restInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/restTimeIncrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/plus" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textCycleRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/cycle"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/numOfCyclesDecrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/minus" />
+
+                <EditText
+                    android:id="@+id/cycleInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:importantForAutofill="no"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/numOfCyclesIncrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/plus" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textSetRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/set"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/numOfSetsDecrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/minus" />
+
+                <EditText
+                    android:id="@+id/setsInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/numOfSetsIncrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/plus" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textCalmRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/Sleep"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorText"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/calmTimeDecrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/minus" />
+
+                <EditText
+                    android:id="@+id/calmInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/calmTimeIncrease"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pressed_ripple"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/plus" />
+
+            </LinearLayout>
+
+
+            <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
+                android:id="@+id/colorPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:hslColoringMode="pure"
+                app:hslMode="hue" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:textAlignment="center">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/colorAccent"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorWhite"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="183dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:text="@string/save"
+                    android:textColor="@color/colorWhite"
+                    tools:ignore="ButtonStyle,MissingConstraints" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

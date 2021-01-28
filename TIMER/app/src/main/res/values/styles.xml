@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#4B7498</item>
+        <item name="colorPrimaryDark">#466E59</item>
+        <item name="colorPrimaryVariant">#335370</item>
+        <item name="colorAccent">#4C88C8</item>
+        <item name="android:statusBarColor">#46705A</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Field">
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+    </style>
+
+    <style name="KeyboardButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textSize">24sp</item>
+    </style>
+</resources>
