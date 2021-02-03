@@ -8,4 +8,9 @@
     <string name="name">Name</string>
     <string name="duration">Duration</string>
     <string name="add">Add</string>
+    <string name="add_sequence">Add sequence</string>
+    <string name="color">Color</string>
+    <string name="color_hex">Color HEX</string>
+    <string name="change">Change</string>
+    <string name="delete">Delete</string>
 </resources>

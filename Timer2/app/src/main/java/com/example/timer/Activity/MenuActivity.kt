@@ -10,9 +10,14 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        val btn = findViewById<Button>(R.id.edit_button)
+        var btn = findViewById<Button>(R.id.edit_button)
         btn.setOnClickListener {
             val intent = Intent(applicationContext, EditActivity::class.java)
+            startActivity(intent)
+        }
+        btn = findViewById(R.id.home_button)
+        btn.setOnClickListener {
+            val intent = Intent(applicationContext, HomeActivity::class.java)
             startActivity(intent)
         }
     }
