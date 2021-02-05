@@ -10,7 +10,7 @@ import com.example.converter.R
 import com.example.converter.ViewModel.ConverterViewModel
 
 class KeyboardFragment : Fragment() {
-    var converterViewModel: ConverterViewModel? = null
+    lateinit var converterViewModel: ConverterViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         converterViewModel = ViewModelProviders.of(requireActivity()).get(ConverterViewModel::class.java)

@@ -1,20 +1,21 @@
 package com.example.converter.Actifity
 
-import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Spinner
+import com.example.converter.ViewModel.ConverterViewModel
+import android.os.Bundle
+import com.example.converter.R
 import androidx.lifecycle.ViewModelProviders
-import com.example.converter.Enum.CurrencyEnum
+import android.content.Intent
+import android.widget.ArrayAdapter
 import com.example.converter.Enum.DistanceEnum
 import com.example.converter.Enum.WeightEnum
-import com.example.converter.R
-import com.example.converter.ViewModel.ConverterViewModel
+import com.example.converter.Enum.CurrencyEnum
 
 class ConverterActivity : AppCompatActivity() {
     lateinit var inputS: Spinner
     lateinit var outputS: Spinner
-    var converterViewModel: ConverterViewModel? = null
+    lateinit var converterViewModel: ConverterViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_converter)
