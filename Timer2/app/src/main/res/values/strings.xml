@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Timer</string>
+    <string name="home">Home</string>
+    <string name="edit">Edit</string>
+    <string name="timer">Timer</string>
+    <string name="setting">Setting</string>
+    <string name="add_timer">Add timer</string>
+    <string name="name">Name</string>
+    <string name="duration">Duration</string>
+    <string name="add">Add</string>
+    <string name="add_sequence">Add sequence</string>
+    <string name="color">Color</string>
+    <string name="color_hex">Color HEX</string>
+    <string name="change">Change</string>
+    <string name="delete">Delete</string>
+    <string name="prev_timer"><![CDATA[<]]></string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="save">Save</string>
+    <string name="font_size">Font Size</string>
+    <string name="english">English</string>
+    <string name="delete_all_data">Delete all data</string>
+</resources>
