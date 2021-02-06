@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Таймер</string>
+    <string name="home">Главная страница</string>
+    <string name="edit">Изменить</string>
+    <string name="timer">Таймер</string>
+    <string name="setting">Настройки</string>
+    <string name="add_timer">Добавить таймер</string>
+    <string name="name">Имя</string>
+    <string name="duration">Длительность</string>
+    <string name="add">Добавить</string>
+    <string name="add_sequence">Добавить список</string>
+    <string name="color">Цвет</string>
+    <string name="color_hex">Цвет в HEX</string>
+    <string name="change">Изменить</string>
+    <string name="delete">Удалить</string>
+    <string name="prev_timer"><![CDATA[<]]></string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="save">Сохранить</string>
+    <string name="font_size">Размер шрифта</string>
+    <string name="english">Английский</string>
+    <string name="delete_all_data">Удалить все данные</string>
+</resources>

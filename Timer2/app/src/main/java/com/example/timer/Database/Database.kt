@@ -6,7 +6,6 @@ import com.example.timer.Model.Sequence
 import com.example.timer.Model.Timer
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import java.lang.String
 import java.util.*
 
 object Database {
@@ -71,11 +70,6 @@ object Database {
     fun getSequences(context: Context): ArrayList<Sequence> {
         val db =
             context.openOrCreateDatabase(DatabaseHelper.DATABASE_NAME, Context.MODE_PRIVATE, null)
-        db.execSQL(
-            "CREATE TABLE IF NOT EXISTS " + DatabaseHelper.SEQUENCE_TABLE +
-                    " (id INTEGER PRIMARY KEY, " + DatabaseHelper.NAME_SEQUENCE_ROW + " TEXT, " + DatabaseHelper.COLOR_SEQUENCE_ROW +
-                    " INTEGER, " + DatabaseHelper.TIMERS_SEQUENCE_ROW + " TEXT);"
-        )
         val cursor = db.rawQuery("SELECT * FROM " + DatabaseHelper.SEQUENCE_TABLE + ";", null)
         val sequences = ArrayList<Sequence>()
         val builder = GsonBuilder()
@@ -108,7 +102,7 @@ object Database {
         cv.put(DatabaseHelper.NAME_SEQUENCE_ROW, sequence.name)
         cv.put(DatabaseHelper.COLOR_SEQUENCE_ROW, sequence.color)
         cv.put(DatabaseHelper.TIMERS_SEQUENCE_ROW, gson.toJson(sequence.timers))
-        db.update(DatabaseHelper.SEQUENCE_TABLE, cv, "id = " + String.valueOf(sequence.id), null)
+        db.update(DatabaseHelper.SEQUENCE_TABLE, cv, "id = " + sequence.id.toString(), null)
     }
 
     fun getSequence(context: Context, id: Long): Sequence {
@@ -131,5 +125,12 @@ object Database {
             sequence = Sequence(id, name, color, timers)
         }
         return sequence
+    }
+
+    fun deleteAll(context: Context) {
+        val db =
+            context.openOrCreateDatabase(DatabaseHelper.DATABASE_NAME, Context.MODE_PRIVATE, null)
+        db.execSQL("DELETE FROM " + DatabaseHelper.SEQUENCE_TABLE)
+        db.execSQL("DELETE FROM " + DatabaseHelper.TIMER_TABLE)
     }
 }

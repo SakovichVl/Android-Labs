@@ -9,13 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity.SettingActivity" />
+
+        <service android:name=".Service.TimeService" />
+
+        <activity android:name=".Activity.TimersActivity" />
         <activity android:name=".Activity.SequencePage" />
         <activity android:name=".Activity.HomeActivity" />
         <activity android:name=".Activity.EditActivity" />
         <activity android:name=".Activity.MenuActivity" />
         <activity
-            android:theme="@style/SplashTheme"
-            android:name=".Activity.MainActivity">
+            android:name=".Activity.MainActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

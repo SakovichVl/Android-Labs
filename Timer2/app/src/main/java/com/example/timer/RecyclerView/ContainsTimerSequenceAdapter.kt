@@ -10,7 +10,6 @@ import com.example.timer.Database.Database.UpdateSequence
 import com.example.timer.Model.Sequence
 import com.example.timer.Model.Timer
 import com.example.timer.R
-import java.lang.String
 import java.util.*
 
 class ContainsTimerSequenceAdapter(
@@ -26,7 +25,7 @@ class ContainsTimerSequenceAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val timer = timers[position]
         holder.name.text = timer.name
-        holder.duration.text = String.valueOf(timer.duration)
+        holder.duration.text = timer.duration.toString()
     }
 
     override fun getItemCount(): Int {

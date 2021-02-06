@@ -12,11 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.timer.R
 import com.example.timer.RecyclerView.TimerAdapter
+import com.example.timer.Settings.Settings
 import com.example.timer.ViewModel.EditViewModel
 
 class EditActivity : AppCompatActivity() {
     private var mViewModel: EditViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
+        Settings.installSettings(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit)
         mViewModel = ViewModelProvider(this).get(EditViewModel::class.java);

@@ -8,6 +8,12 @@ class Timer : Parcelable {
     var name: String? = null
     var duration = 0
 
+    constructor(parcel: Parcel){
+        id = parcel.readLong()
+        name = parcel.readString()
+        duration = parcel.readInt()
+    }
+
     constructor(name: String?, duration: Int) {
         this.name = name
         this.duration = duration
@@ -31,18 +37,13 @@ class Timer : Parcelable {
         dest.writeInt(duration)
     }
 
-    companion object {
-        val CREATOR: Parcelable.Creator<Timer?> = object : Parcelable.Creator<Timer?> {
-            override fun createFromParcel(source: Parcel): Timer? {
-                val id = source.readLong()
-                val name = source.readString()
-                val duration = source.readInt()
-                return Timer(id, name, duration)
-            }
+    companion object CREATOR : Parcelable.Creator<Timer> {
+        override fun createFromParcel(parcel: Parcel): Timer {
+            return Timer(parcel)
+        }
 
-            override fun newArray(size: Int): Array<Timer?> {
-                return arrayOfNulls(size)
-            }
+        override fun newArray(size: Int): Array<Timer?> {
+            return arrayOfNulls(size)
         }
     }
 }

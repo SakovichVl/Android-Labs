@@ -10,11 +10,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.timer.R
 import com.example.timer.RecyclerView.SequenceAdapter
+import com.example.timer.Settings.Settings
 import com.example.timer.ViewModel.HomeViewModel
 
 class HomeActivity : AppCompatActivity() {
     private var mViewModel: HomeViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
+        Settings.installSettings(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         mViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)

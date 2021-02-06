@@ -11,11 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.timer.R
 import com.example.timer.RecyclerView.AllTimersAdapter
 import com.example.timer.RecyclerView.ContainsTimerSequenceAdapter
+import com.example.timer.Settings.Settings
 import com.example.timer.ViewModel.SequencePageViewModel
 
 class SequencePage : AppCompatActivity() {
     private var mViewModel: SequencePageViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
+        Settings.installSettings(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sequence_page)
         mViewModel = ViewModelProvider(this).get(SequencePageViewModel::class.java)

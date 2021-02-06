@@ -11,7 +11,16 @@ class Sequence : Parcelable {
     var color = 0
     var timers: ArrayList<Timer>? = null
 
-    constructor(name: String?, color: String?) {
+    constructor(parcel: Parcel){
+        id = parcel.readLong()
+        name = parcel.readString()
+        color = parcel.readInt()
+        timers = ArrayList<Timer>().apply{
+            parcel.readTypedList(this, Timer.CREATOR)
+        }
+    }
+
+    constructor(name: String?, color: String?){
         this.name = name
         try {
             this.color = Color.parseColor(color)
@@ -40,20 +49,13 @@ class Sequence : Parcelable {
         dest.writeTypedList(timers)
     }
 
-    companion object {
-        val CREATOR: Parcelable.Creator<Sequence?> = object : Parcelable.Creator<Sequence?> {
-            override fun createFromParcel(source: Parcel): Sequence? {
-                val id = source.readLong()
-                val name = source.readString()
-                val color = source.readInt()
-                val timers = ArrayList<Timer>()
-                source.readTypedList(timers as List<Timer?>, Timer.CREATOR)
-                return Sequence(id, name, color, timers)
-            }
+    companion object CREATOR : Parcelable.Creator<Sequence> {
+        override fun createFromParcel(parcel: Parcel): Sequence {
+            return Sequence(parcel)
+        }
 
-            override fun newArray(size: Int): Array<Sequence?> {
-                return arrayOfNulls(size)
-            }
+        override fun newArray(size: Int): Array<Sequence?> {
+            return arrayOfNulls(size)
         }
     }
 }
