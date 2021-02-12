@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/setup_profile"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:layout_centerHorizontal="true"
+        android:text="@string/save" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
+        android:text="@string/name" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="120dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_choose_file"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_weight="1"
+            android:background="@color/teal_700"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:text="@string/choose_file" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="170dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_upload_file"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:text="@string/upload_file" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/gravatarButton"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:text="@string/gravatar" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/imgFile"
+            android:layout_width="match_parent"
+            android:layout_marginTop="300dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+</RelativeLayout>
